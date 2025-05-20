@@ -1,0 +1,66 @@
+@use "@/theme/sass" as *;
+
+.extra1 {
+  font-size: scaleValue(30px, 66px);
+  line-height: 1.3;
+}
+.extra2 {
+  font-size: scaleValue(28px, 56px);
+  line-height: 1.3;
+}
+.head1 {
+  font-size: scaleValue(26px, 48px);
+  line-height: 1.2;
+}
+.head11 {
+  font-size: scaleValue(26px, 44px);
+  line-height: 1.2;
+}
+.head2 {
+  font-size: scaleValue(20px, 36px);
+  line-height: 1.2;
+}
+.head2_5 {
+  font-size: scaleValue(20px, 32px);
+  line-height: 1.2;
+}
+.head3 {
+  font-size: scaleValue(18px, 24px);
+  line-height: 1.2;
+}
+.head4 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+.head5 {
+  font-size: 18px;
+  line-height: 1.2;
+}
+.head6 {
+  font-size: 16px;
+  line-height: 1.2;
+}
+.details {
+  font-size: 18px;
+  line-height: 1.2;
+}
+.body1 {
+  font-size: 16px;
+  line-height: 1.2;
+}
+.body2 {
+  font-size: 14px;
+  line-height: 1.2;
+}
+.caption1 {
+  font-size: 12px;
+  line-height: 1.2;
+}
+.caption2 {
+  font-size: 10px;
+  line-height: 1.2;
+}
+.caption3 {
+  font-size: 8px;
+  line-height: 1.2;
+}

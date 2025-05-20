@@ -1,0 +1,62 @@
+@use "@/theme/sass" as *;
+
+.exploring_sec {
+  width: 100%;
+  padding-inline: 20px;
+  padding-block: scaleValue(0px, 40px);
+  .custom_container {
+    .inner_sec {
+      background: url("../../../public/assets/images/exploring/exploring_bg.webp")
+        no-repeat center center;
+      height: 100%;
+      width: 100%;
+      border-radius: 37px;
+      padding-block: scaleValue(50px, 80px);
+      padding-inline: 20px;
+      background-attachment: fixed;
+      .exploring {
+        @include displayFlex(column, center, center);
+        margin-inline: auto;
+        gap: 20px;
+        .play {
+          background-color: hsl(var(--clr_bg_light_black) / 0.02);
+          width: 216px;
+          height: 216px;
+          border-radius: 50%;
+          margin-block-start: scaleValue(40px, 60px);
+          @include displayFlex(row, center, center);
+          backdrop-filter: blur(20px);
+          position: relative;
+          isolation: isolate;
+          z-index: 2;
+          cursor: pointer;
+          transition: all 0.4s ease-in-out;
+          &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background-color: hsl(var(--btn_bg_white));
+            @include displayFlex(row, center, center);
+            transition: all 0.4s ease-in-out;
+            @include max(576px) {
+              width: 70px;
+              height: 70px;
+            }
+          }
+          &:hover {
+            &::after {
+              transform: scale(1.2, 1.2);
+            }
+          }
+          @include max(576px) {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+    }
+  }
+}

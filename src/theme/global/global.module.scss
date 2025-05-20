@@ -1,0 +1,31 @@
+@use "@/theme/sass" as *;
+@forward "./fonts";
+
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin-inline: auto;
+}
+.DH_container {
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+}
+.padding_block {
+  padding-block: scaleValue(40px, 100px);
+}
+
+.section_padding {
+  padding-inline: 36px;
+
+  @include max(576px) {
+    padding-inline: 30px;
+  }
+  @include max(480px) {
+    padding-inline: 20px;
+  }
+}
+
+.blue_text{
+  color: hsl(var(--primary));
+}

@@ -1,0 +1,45 @@
+@use "@/theme/sass" as *;
+
+.copy_right_sec {
+  width: 100%;
+  border-block-start: 1px solid hsl(var(--border_05));
+  padding-block: 35px;
+  .inner_copy_right {
+    width: 100%;
+    @include displayFlex(row, center, space-between);
+    flex-wrap: wrap;
+    gap: 20px;
+    .left_side {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 25px;
+    }
+    .middle {
+      width: fit-content;
+      margin: 0 auto;
+      @include displayFlex(row, center, center);
+    }
+    .right_side {
+      @include displayFlex(row, center, flex-end);
+      gap: 15px;
+      width: fit-content;
+      text-align: end;
+      .link {
+        &:hover {
+          color: hsl(var(--inputPrimary));
+        }
+      }
+    }
+    @include max(767px) {
+      flex-direction: column;
+      .right_side {
+        text-align: center;
+      }
+    }
+  }
+  @include max(479px) {
+    padding-inline: 0;
+  }
+}

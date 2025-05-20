@@ -1,0 +1,43 @@
+@use "@/theme/sass" as *;
+
+.NavbarItems {
+  @include displayFlex(row, center, flex-start);
+  gap: 50px;
+  margin-inline-start: auto;
+  @include max(1023px) {
+    display: none;
+  }
+  .NavItems {
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.77, 0.2, 0.05, 1);
+    padding-block: 6px;
+    &:hover {
+      color: hsl(var(--primary));
+    }
+    &.active {
+      color: hsl(var(--primary));
+    }
+  }
+  &.mini_menuBar {
+    @include displayFlex(column, flex-start, flex-start);
+    margin-inline-start: inherit;
+    gap: 4px;
+    width: 100%;
+    display: none;
+    @include max(1023px){
+        display: inline-flex;
+    }
+    .NavItems{
+        padding-inline: 16px;
+         width: 100%;
+    &:hover {
+      background: hsl(var(--bg_primary_light));
+      color: hsl(var(--primary));
+    }
+    &.active {
+        background: hsl(var(--bg_primary_light));
+      color: hsl(var(--primary));
+    }
+    }
+  }
+}

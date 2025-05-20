@@ -1,0 +1,32 @@
+@use "@/theme/sass" as *;
+
+.counter_sec {
+  width: 100%;
+  .inner_sec {
+    width: 100%;
+    padding-block-start: scaleValue(40px, 80px);
+    .grid_box {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: scaleValue(20px, 80px);
+      .counter_box {
+        width: 100%;
+        @include displayFlex(row, center, flex-start);
+        gap: 16px;
+        .counter_title {
+          max-width: 170px;
+        }
+      }
+      @include max(640px) {
+        gap: 30px;
+        .counter_box {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}

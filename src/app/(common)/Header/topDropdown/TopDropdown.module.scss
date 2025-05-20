@@ -1,0 +1,58 @@
+@use "@/theme/sass" as *;
+.drop_btn{
+    background: transparent;
+   
+    &:focus-visible{
+        outline: none;
+    }
+    .content_box {
+       @include displayFlex(row, center, flex-end);
+       gap: 15px;
+       transition: all 0.3s ease-in-out;
+       width: fit-content;
+       height: 100%;
+       cursor: pointer;
+       border-radius: 8px;
+       .box_img {
+       width: 44px;
+       height: 44px;
+       border-radius: 12px;
+       }
+       .box_info {
+       text-align: end;
+           @include max(576px){
+           display: none;
+           }
+       }
+   }
+   .drop{
+       @include displayFlex(row, center, center);
+       svg {
+           color: hsl(var(--clr_text_gray500));
+       }
+   }
+
+    &:hover{
+        .content_box{
+            .box_info{
+                h3{
+                    color: hsl(var(--clr_text_white)); 
+                }
+                h4{
+                    color: hsl(var(--clr_text_white)); 
+                }
+            }
+        }
+        .drop{
+            svg{
+                  color: hsl(var(--clr_text_white));
+            }
+        }
+    }
+}
+.menu{
+    &:hover{
+         background: hsl(var(--bg_primary_light));
+      color: hsl(var(--primary));
+    }
+}

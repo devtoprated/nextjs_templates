@@ -1,0 +1,30 @@
+@use "@/theme/sass" as *;
+
+.chip {
+  width: fit-content;
+  height: 20px;
+  border-radius: 6px;
+  padding-inline: 8.5px;
+  background-color: hsl(var(--clr_bg_light_blue) / 0.07);
+  color: hsl(var(--clr_text_pink_purple));
+  @include displayFlex(row, center, center);
+  font-weight: 700;
+  &.right_chip {
+    color: hsl(var(--clr_text_light_blue2));
+  }
+}
+
+.activeProject {
+  color: #22543D !important;
+  background-color: #C6F6D5 !important;
+}
+
+.inActiveProject {
+  color: #4A4A4A !important;
+  background-color: #dbdbdb !important;
+}
+// .soldProject {
+//   color: #7B3DE1 !important;
+//   background-color: hsl(var(--clr_bg_gray200));;
+// } 
+

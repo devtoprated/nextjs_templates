@@ -1,0 +1,93 @@
+@use "@/theme/sass" as *;
+
+.howItSec {
+  width: 100%;
+  .inner_sec {
+    width: 100%;
+    .heading_section {
+      width: 100%;
+      text-align: center;
+      .title {
+        color: hsl(var(--clr_text_primary));
+        .grad {
+          color: hsl(var(--primary));
+        }
+      }
+      .sub_text {
+        color: hsl(var(--clr_text_light_blue));
+        margin-block-start: 10px;
+      }
+    }
+    .grid_wrapper {
+      width: 100%;
+      margin-block-start: scaleValue(40px, 80px);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
+      .grid_item {
+        width: 100%;
+        background: hsl(var(--clr_bg_card_1));
+        padding: 30px 32px;
+        border-radius: 34px;
+        @include displayFlex(column, flex-start, space-between);
+        gap: 20px;
+        min-height: 420px;
+        transition: all 0.4s ease-in-out;
+        .grid_content {
+          width: 100%;
+          @include displayFlex(column, flex-start, flex-start);
+          gap: 30px;
+          .number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            @include displayFlex(row, center, center);
+            color: hsl(var(--clr_text_white));
+            background: hsl(var(--primary));
+          }
+        }
+
+        .icon {
+          width: fit-content;
+          margin-inline-start: auto;
+          img{
+               transition: all 0.4s ease-in-out;
+          }
+        }
+
+        &:nth-of-type(2) {
+          background: hsl(var(--primary));
+          .grid_content {
+            .number {
+              background: hsl(var(--clr_bg_card_number));
+            }
+          }
+        }
+        &:nth-of-type(3) {
+          background: hsl(var(--clr_bg_card_3));
+          .grid_content {
+            .number {
+              background: hsl(var(--clr_bg_card_1));
+            }
+          }
+        }
+        &:nth-of-type(4) {
+          background: hsl(var(--clr_bg_gray));
+          .grid_content {
+            .number {
+              background: hsl(var(--clr_bg_card_3));
+            }
+            .title {
+              color: hsl(var(--clr_text_primary_02));
+            }
+          }
+        }
+         &:hover{
+          img{
+            transform: translateY(-5.1px);
+          }
+        }
+      }
+    }
+  }
+}

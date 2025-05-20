@@ -1,0 +1,23 @@
+@use "@/theme/sass" as *;
+
+.login_sec {
+  width: 100%;
+  .inner_sec {
+    // @include displayFlex(row, stretch, space-between);
+    display: grid;
+    grid-template-columns: 60% 40%;
+    @include max(991px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .left_content {
+      width: 100%;
+      position: relative;
+    }
+    .right_content {
+      width: 100%;
+      @include max(991px) {
+        display: none;
+      }
+    }
+  }
+}

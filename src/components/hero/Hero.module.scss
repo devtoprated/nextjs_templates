@@ -1,0 +1,174 @@
+@use "@/theme/sass" as *;
+
+.heroHome_sec {
+  width: 100%;
+  background: hsl(var(--bg_light_purple));
+  padding-block: scaleValue(80px, 160px) scaleValue(60px, 100px);
+  .innerWrap_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
+    @include max(1023px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .left_content {
+      width: 100%;
+      padding-inline-end: 40px;
+      .inner_content {
+        max-width: 540px;
+        width: 100%;
+        @include max(1023px) {
+          max-width: 100%;
+        }
+        .hero_sub_title {
+          color: hsl(var(--clr_text_primary));
+          font-weight: 400;
+          margin-block-end: 10px;
+        }
+        .hero_title {
+          color: hsl(var(--clr_text_primary));
+          font-weight: 600;
+        }
+      }
+      .herobox{
+        @include displayFlex(row, center, flex-start);
+        gap: 20px;
+        flex-wrap: wrap;
+        padding-block: scaleValue(30px, 50px) 10px;
+      }
+
+      .hero_bottomInfo {
+        @include displayFlex(row, center, flex-start);
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+        // padding-block: scaleValue(30px, 50px) 20px;
+        .hero_social {
+          @include displayFlex(column, flex-start, flex-start);
+          gap: 10px;
+          .social_box {
+            @include displayFlex(row, center, flex-start);
+            gap: 20px;
+            .box {
+              @include displayFlex(row, center, center);
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              background: hsl(var(--bg_white));
+              border: 0.91px solid hsl(var(--bg_white));
+              box-shadow: var(--primary_shadow);
+              transition: all 0.4s ease-in-out;
+              cursor: pointer;
+              svg {
+                width: 28px;
+                height: 28px;
+                color: hsl(var(--clr_text_black));
+                transition: all 0.4s ease-in-out;
+              }
+              img {
+                transition: all 0.4s ease-in-out;
+              }
+              &:hover {
+                img {
+                  transform: scale(1.1);
+                }
+                svg {
+                  transform: scale(1.1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .right_content {
+      width: 100%;
+      position: relative;
+
+      .right_inner_content {
+        position: relative;
+        .heroSmall_img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          .heroSmall_imgBox {
+            position: relative;
+            .content_box2 {
+              @include displayFlex(row, center, center);
+              gap: 15px;
+              max-width: 130px;
+              width: 100%;
+              padding-block: 15px;
+              padding-inline: 10px;
+              border-start-start-radius: 21px;
+              border-start-end-radius: 21px;
+              border-end-end-radius: 21px;
+              background: hsl(var(--bg_black));
+              border: 1px solid hsl(var(--bg_white));
+              position: absolute;
+              right: -40px;
+              top: -33px;
+              @include max(1399px) {
+                right: 0;
+              }
+              @include max(991px) {
+                right: -40px;
+              }
+              @include max(767px) {
+                padding-block: 10px;
+                right: 0;
+                // top: 60%;
+                scale: 0.6;
+              }
+
+              .custom_text {
+                @include max(479px) {
+                  font-size: 14px;
+                }
+              }
+            }
+            .Small_img {
+              @include max(479px) {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .content_box {
+          max-width: 295px;
+          width: 100%;
+          padding-block: 25px;
+          padding-inline: 30px;
+          border-start-start-radius: 21px;
+          border-start-end-radius: 21px;
+          border-end-start-radius: 21px;
+          background: hsl(var(--primary));
+          position: absolute;
+          left: -130px;
+          // left: scaleValue(-60px, -130px);
+          top: 42%;
+          @include max(1199px) {
+            top: 35%;
+            max-width: 250px;
+            left: -50px;
+          }
+          @include max(767px) {
+            max-width: 230px;
+            padding-block: 10px;
+            padding-inline: 22px;
+            top: 42%;
+            left: -20px;
+            scale: 0.8;
+          }
+
+          .custom_text {
+            @include max(479px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

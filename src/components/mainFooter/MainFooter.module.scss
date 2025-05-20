@@ -1,0 +1,123 @@
+@use "@/theme/sass" as *;
+.footer_sec {
+  padding-block: scaleValue(40px, 80px) 0;
+  position: relative;
+  .top_scroll {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -29px;
+    z-index: 11;
+    margin-inline: auto;
+    width: fit-content;
+    .top_arrow {
+      width: 59px;
+      height: 59px;
+      background: hsl(var(--primary));
+      border-radius: 12px;
+      @include displayFlex(row, center, center);
+      transform: rotate(45deg);
+      cursor: pointer;
+      animation: bounce 1s infinite;
+      svg {
+        transform: rotate(314deg);
+        font-size: 20px;
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0%) rotate(45deg);
+          animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+          transform: translateY(25%) rotate(45deg);
+          animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+      }
+    }
+  }
+  .inner_content {
+    position: relative;
+    width: 100%;
+    padding-block: 0 scaleValue(40px, 60px);
+    @include displayFlex(row, center, space-between);
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .text_grad {
+      @include textGradient(var(--clr_text_Gradient));
+    }
+    .menu_sec {
+      width: auto;
+
+      .title {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+          background-color: hsl(var(--bg_white));
+          height: 0;
+          width: 0;
+          transition: all 0.4s ease-in-out;
+        }
+        &:hover {
+          &::before {
+            width: 100%;
+            height: 2px;
+          }
+        }
+      }
+    }
+
+    .download_our_mobile {
+      width: 100%;
+      .our_mobile_wrapper {
+        @include displayFlex(row, center, flex-start);
+        gap: 20px;
+        .link_group {
+          @include displayFlex(row, center, flex-start);
+          gap: 20px;
+        }
+        @include max(767px) {
+          @include displayFlex(column, center, center);
+        }
+      }
+      .foot_text {
+        flex: 1;
+        color: hsl(var(--clr_foot_text_2));
+      }
+      .app {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        @include displayFlex(row, center, center);
+        background: hsl(var(--clr_bg_app_link));
+      }
+    }
+
+    @include max(767px) {
+      @include displayFlex(column, center, center);
+    }
+    .footer_content {
+      width: auto;
+      flex: 1;
+      .f_logo {
+        @include max(767px) {
+          margin-inline: auto;
+        }
+      }
+      .text_box {
+        max-width: 510px;
+        width: 100%;
+        @include max(991px) {
+          max-width: 262px;
+        }
+        @include max(767px) {
+          max-width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

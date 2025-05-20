@@ -1,0 +1,15 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "L9759VNNWU.com.gobyhomes.prod",
+                "paths": ["*"]
+            },
+            {
+                "appID": "L9759VNNWU.com.gobyhomes.dev",
+                "paths": ["*"]
+            }
+        ]
+    }
+} 

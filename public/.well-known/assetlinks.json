@@ -1,0 +1,24 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.gobyhomes.prod",
+      "sha256_cert_fingerprints": [
+        "C6:57:18:0F:76:00:D6:40:8A:47:79:5C:87:4C:2F:EA:3B:D8:02:BD:2D:56:75:FF:AC:F7:24:BD:EB:2E:64:33",
+        "A0:53:4E:4E:5C:A6:9B:D9:F9:10:A7:B9:E4:D6:76:3C:98:7E:E8:93:85:4B:52:AD:18:E6:19:0E:4E:2B:F4:D5"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.gobyhomes.dev",
+      "sha256_cert_fingerprints": [
+        "C6:57:18:0F:76:00:D6:40:8A:47:79:5C:87:4C:2F:EA:3B:D8:02:BD:2D:56:75:FF:AC:F7:24:BD:EB:2E:64:33",
+        "A0:53:4E:4E:5C:A6:9B:D9:F9:10:A7:B9:E4:D6:76:3C:98:7E:E8:93:85:4B:52:AD:18:E6:19:0E:4E:2B:F4:D5"
+      ]
+    }
+  }
+]

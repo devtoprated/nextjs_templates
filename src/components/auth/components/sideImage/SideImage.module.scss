@@ -1,0 +1,15 @@
+@use "@/theme/sass" as *;
+
+.img_box {
+  @include displayFlex(row, stretch, flex-end);
+  height: 100%;
+  img {
+    height: 100% ;
+    object-fit: cover;
+    object-position: 0 0;
+    max-height: 90svh ;
+    // @include max(1024px) {
+    //   height: 100%;
+    // }
+  }
+}

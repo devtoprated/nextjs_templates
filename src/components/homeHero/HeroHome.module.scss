@@ -1,0 +1,73 @@
+@use "@/theme/sass" as *;
+.heroHome_sec {
+  width: 100%;
+  background: hsl(var(--bg_light_purple));
+  position: relative;
+  z-index: 1;
+  .image_house {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: fit-content;
+    height: fit-content;
+  }
+  .inner_content {
+    width: 100%;
+    padding-block: scaleValue(80px, 160px) scaleValue(60px, 100px);
+    position: relative;
+    z-index: 2;
+    .title {
+      color: hsl(var(--clr_text_primary));
+      max-width: 592px;
+      .grad {
+        color: hsl(var(--primary));
+      }
+    }
+    .payment_tab {
+      width: 100%;
+      margin-top: scaleValue(40px, 60px);
+      .payment_tab_wrapper {
+        width: fit-content;
+        @include max(767px) {
+          width: 100%;
+        }
+      }
+      .card_sec {
+        border: none;
+        box-shadow: 0px 106px 113.1px -37px #71697c38;
+        .main_wrapper {
+          @include displayFlex(row, flex-end, flex-start);
+          gap: 20px;
+          flex-wrap: wrap;
+          .input_wrapper {
+            width: fit-content;
+            @include max(767px) {
+              width: 100%;
+              .select {
+                width: 100%;
+              }
+            }
+            .input_control{
+              background: hsl(var(--clr_bg_input_light) / 0.54);
+              color: hsl(var(--placeHolderText));
+              min-height: 55px;
+              border: 0;
+              border-radius: 14px;
+            }
+            .select{
+              background: hsl(var(--clr_bg_input_light) / 0.54);
+              color: hsl(var(--placeHolderText));
+              min-height: 55px;
+              border: 0;
+              border-radius: 14px;
+            }
+          }
+          @include max(767px) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          }
+        }
+      }
+    }
+  }
+}

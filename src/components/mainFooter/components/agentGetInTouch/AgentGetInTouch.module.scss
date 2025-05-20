@@ -1,0 +1,47 @@
+@use "@/theme/sass" as *;
+
+.menu_list {
+  width: fit-content;
+  display: contents;
+  .menu_title {
+    .title {
+      position: relative;
+      padding-block-end: 20px;
+      margin-block-end: 30px;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 1px;
+        background: hsl(var(--secondary-foreground));
+      }
+    }
+  }
+  .social_sec {
+    width: 100%;
+    @include displayFlex(row, center, flex-end);
+    flex-wrap: wrap;
+    gap: 30px;
+    @include max(767px) {
+      @include displayFlex(row, center, center);
+    }
+    .link {
+      @include displayFlex(row, center, center);
+      &:hover {
+        scale: 1.2;
+      }
+      &:active {
+        scale: 0.9;
+      }
+    }
+  }
+  @include max(639px) {
+    grid-column: span 2;
+  }
+  @include max(479px) {
+    grid-column: span 1;
+  }
+}
